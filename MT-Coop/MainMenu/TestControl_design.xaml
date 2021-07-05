@@ -1,0 +1,42 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MT_Coop.MainMenu"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="MT_Coop.MainMenu.TestControl_design"
+             mc:Ignorable="d" d:DesignWidth="800" Height="1073.377" Width="771">
+    <Grid>
+        <ScrollViewer Foreground="Black" Background="Gray">
+            <StackPanel Background="PaleTurquoise" CanVerticallyScroll="True" HorizontalAlignment="Center">
+                <TextBlock HorizontalAlignment="Left" Height="77.921" Margin="0,0,0,0" TextWrapping="Wrap" Text="test" Width="223.206" VerticalAlignment="Top" TextAlignment="Left" FontSize="72"/>
+                <TextBlock HorizontalAlignment="Left" Height="77.921" Margin="609,0,0,0" TextWrapping="Wrap" Text="test" Width="142.206" VerticalAlignment="Center" TextAlignment="Right" FontSize="72"/>
+                <TextBlock HorizontalAlignment="Left" Height="77.921" Margin="305.845,0,0,0" TextWrapping="Wrap" Text="test" Width="142.206" VerticalAlignment="Center" TextAlignment="right"/>
+                <TextBlock x:Name="test_text" HorizontalAlignment="Center" Height="137" Margin="305.845,0,0,0" TextWrapping="Wrap" Text="test" Width="317" VerticalAlignment="Center" TextAlignment="Center"/>
+               
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <materialDesign:Card x:Name="cardnamehere" HorizontalAlignment="Center" Padding="12,12,12,12" Margin="18,18,18,24" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
+                        <StackPanel Orientation="Vertical">
+                            <StackPanel Orientation="Horizontal"  HorizontalAlignment="Center" Margin="0,0,0,18">
+                                <Button x:Name="pagination_prev_btn" Margin="6,0,6,0" Content=" Prev " Padding="0" Click="pagination_prev"/>
+                                <TextBlock x:Name="pagination_text" Margin="6,0,6,0" Text="page 0 / 0 " VerticalAlignment="Center"/>
+                                <Button x:Name="pagination_next_btn" Margin="6,0,6,0" Content=" Next " Padding="0" Click="pagination_next"/>
+                            </StackPanel>
+                            <DataGrid x:Name="datagrid_sample" MinWidth="500" ItemsSource="{Binding}" AlternatingRowBackground="#FF43834C" CanUserResizeRows="False" HorizontalGridLinesBrush="#FF919191" SelectionMode="Single" CanUserDeleteRows="False" CanUserAddRows="False" BorderBrush="#9F363636" HorizontalAlignment="Center" VerticalAlignment="Center" MinColumnWidth="50" MaxHeight="1000" RowBackground="#FFA2EAA9"/>
+                        </StackPanel>
+                    </materialDesign:Card>
+                    <StackPanel Margin="-170,2,0,0">
+                    <Rectangle Width="100" Height="60" Fill="#FFFF5722" >
+                        <Rectangle.Effect>
+                            <DropShadowEffect BlurRadius="15" Direction="180" Opacity="0.4" ShadowDepth="0"/>
+                        </Rectangle.Effect>
+                    </Rectangle>
+                        <TextBlock Text=" showing 50 items " Margin="36,-25,9,0" Foreground="White"/>
+                    </StackPanel>
+                </StackPanel>
+                
+                
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

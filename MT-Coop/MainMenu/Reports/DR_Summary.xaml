@@ -1,0 +1,71 @@
+﻿<UserControl x:Class="MT_Coop.MainMenu.Reports.DR_Summary"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MT_Coop.MainMenu.Reports"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+             mc:Ignorable="d" 
+             d:DesignWidth="800" Height="577"  Width="771" FontFamily="Gill Sans MT" FontSize="16">
+
+    <UserControl.Resources>
+        <ContextMenu x:Key="datagrid1_rightclick" >
+            <MenuItem Header="Print Out" Click="MenuItem_Click"/>
+        </ContextMenu>
+    </UserControl.Resources>
+
+    <Grid Background="#dedede">
+
+
+        <materialDesign:Card
+      Foreground="{DynamicResource PrimaryHueLightForegroundBrush}"
+      Padding="12" Margin="34,27,37,0" Height="533" VerticalAlignment="Top">
+            <materialDesign:Card.Background>
+                <SolidColorBrush Color="#FFF5CDBB"/>
+            </materialDesign:Card.Background>
+            <TextBlock FontSize="32" Margin="10,0" >
+                 List of Delivery Reciept
+            </TextBlock>
+        </materialDesign:Card>
+        
+        <TextBox Name="text_search"
+                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                 materialDesign:HintAssist.Hint="Search client/branch/C#"
+                 KeyUp="Text_search_KeyUp" Margin="56,79,363,0" Height="45" VerticalAlignment="Top">
+        </TextBox>
+
+        <Button x:Name="pagination_prev_btn" Width="50" Height="25" Content=" Prev " Padding="0" Click="pagination_prev" Margin="423,517,298,35"/>
+        <TextBlock x:Name="pagination_text"  Width="80"  Text="page 0 / 0 " Height="19" VerticalAlignment="Top" Margin="342,520,349,0" TextAlignment="Center"/>
+        <Button x:Name="pagination_next_btn"  Width="50" Height="Auto" Content=" Next " Padding="0" Click="pagination_next" Margin="292,517,429,35"/>
+        <Rectangle Fill="#FFFF5722" Margin="606,517,59,17"/>
+        <TextBlock Text="Showing 10 items " Margin="614,519,65,35" Foreground="White" FontSize="12"/>
+
+
+        <DataGrid x:Name="datagrid_list_client"
+                    ItemsSource="{Binding}"
+                    CanUserResizeRows="False" 
+                    SelectionMode="Single"
+                    BorderBrush="DarkGray"
+                    SelectionChanged="datatable_click" 
+                    IsReadOnly="True"
+                    MouseDown="Mouserightclick"
+                    CanUserDeleteRows="False"
+                    CanUserAddRows="False" 
+                    HorizontalGridLinesBrush="#FF7E7E7E" 
+                    VerticalGridLinesBrush="Black"
+                    Margin="56,142,59,81"
+                    AutoGeneratingColumn="OnAutoGeneratingColumn" 
+                    FontSize="12"
+                    CanUserSortColumns="True"
+                    RowHeight="33"
+            />
+
+        <DatePicker x:Name="date_f"
+              materialDesign:HintAssist.Hint="Pick Start Date"
+              Style="{StaticResource MaterialDesignOutlinedDatePicker}" Padding="0" Margin="423,58,218,0" FontSize="12" RenderTransformOrigin="1.346,0.586" SelectedDateChanged="Date_f_SelectedDateChanged" VerticalAlignment="Top"/>
+        <DatePicker x:Name="date_s"
+              materialDesign:HintAssist.Hint="Pick End Date"
+              Style="{StaticResource MaterialDesignOutlinedDatePicker}"  Padding="0" Margin="578,58,65,0" FontSize="12" Height="58" SelectedDateChanged="Date_f_SelectedDateChanged" VerticalAlignment="Top"/>
+    </Grid>
+</UserControl>

@@ -1,0 +1,34 @@
+﻿<Window x:Class="MT_Coop.Database_Connection.database_settings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MT_Coop.Database_Connection"
+        mc:Ignorable="d"
+        Title="Database Settings" Height="238" Width="512" Topmost="True" ResizeMode="NoResize" Background="#FF272727" Foreground="White" FontFamily="Microsoft Sans Serif" FontSize="14">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="14*"/>
+            <RowDefinition Height="123*"/>
+            <RowDefinition Height="72*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="21*"/>
+            <ColumnDefinition Width="128*"/>
+            <ColumnDefinition Width="333*"/>
+            <ColumnDefinition Width="24*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Server domain :" Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Foreground="White" Height="26" Width="109"/>
+        <Label Content="Username :" Grid.Column="1" HorizontalAlignment="Left" Margin="10,36,0,0" Grid.Row="1" VerticalAlignment="Top" Foreground="White" Height="26" Width="82"/>
+        <Label Content="Password :" Grid.Column="1" HorizontalAlignment="Left" Margin="10,62,0,0" Grid.Row="1" VerticalAlignment="Top" Foreground="White" Height="26" Width="79"/>
+        <Label Content="Database :" Grid.Column="1" HorizontalAlignment="Left" Margin="10,88,0,0" Grid.Row="1" VerticalAlignment="Top" Foreground="White" Height="26" Width="78"/>
+        <Label Content="Keygen :" Grid.Column="1" HorizontalAlignment="Left" Margin="10,9,0,0" Grid.Row="2" VerticalAlignment="Top" Foreground="White" Height="26" Width="65"/>
+        <TextBox x:Name="t_sever" Grid.Column="2" HorizontalAlignment="Left" Height="23" Margin="10,14,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="313"/>
+        <TextBox x:Name="t_username" Grid.Column="2" HorizontalAlignment="Left" Height="23" Margin="10,40,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="313"/>
+        <TextBox x:Name="t_database" Grid.Column="2" HorizontalAlignment="Left" Height="23" Margin="10,92,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="313"/>
+        <TextBox x:Name="t_keygen" Grid.Column="2" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="313"/>
+        <PasswordBox x:Name="t_password" Grid.Column="2" HorizontalAlignment="Left" Margin="10,66,0,0" Grid.Row="1" VerticalAlignment="Top" Width="313" Height="23"/>
+        <Button Content="Save" Grid.Column="2" HorizontalAlignment="Left" Margin="121,38,0,0" Grid.Row="2" VerticalAlignment="Top" Width="78" Background="#FFB2F5A3" BorderBrush="{x:Null}" Foreground="#FF272727" FontWeight="Bold" Click="onbuttonclocl" Height="24"/>
+
+    </Grid>
+</Window>

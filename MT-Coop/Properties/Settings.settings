@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="MT_Coop.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="licenseKey" Type="System.String" Scope="User">
+      <Value Profile="(Default)">FEB5EB9A91356</Value>
+    </Setting>
+    <Setting Name="userdb" Type="System.String" Scope="User">
+      <Value Profile="(Default)">rod</Value>
+    </Setting>
+    <Setting Name="passdb" Type="System.String" Scope="User">
+      <Value Profile="(Default)">mangtinapaychoco</Value>
+    </Setting>
+    <Setting Name="namedb" Type="System.String" Scope="User">
+      <Value Profile="(Default)">mtcoop</Value>
+    </Setting>
+    <Setting Name="userid" Type="System.String" Scope="User">
+      <Value Profile="(Default)">unknown</Value>
+    </Setting>
+    <Setting Name="serverdb" Type="System.String" Scope="User">
+      <Value Profile="(Default)">122.54.146.208</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

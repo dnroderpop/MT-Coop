@@ -1,0 +1,11 @@
+﻿<Window xmlns:Viewer="clr-namespace:SAPBusinessObjects.WPF.Viewer;assembly=SAPBusinessObjects.WPF.Viewer"  x:Class="MT_Coop.reportviewers.report_credit_request_slip"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Credit Request Slip" Height="600" Width="900" ResizeMode="CanResizeWithGrip" WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow" >
+    <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
+        <Viewer:CrystalReportsViewer x:Name="report_viewer" ShowLogo="False" ShowSearchTextButton="True" ShowRefreshButton="False" ShowToggleSidePanelButton="False" ShowStatusbar="True" ShowToolbar="True" ToggleSidePanel="None" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" />
+    </Grid>
+</Window>
